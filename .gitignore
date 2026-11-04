@@ -1,6 +1,124 @@
-node_modules/
+# =====================================================
+# Field Reports: root .gitignore (React Native app + server/)
+# =====================================================
+
+# ---------- Secrets (NEVER commit) ----------
 .env
 .env.*
 !.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.keystore
+!debug.keystore
+google-services.json
+GoogleService-Info.plist
+secrets.json
+
+# ---------- Dependencies ----------
+node_modules/
+**/node_modules/
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+.pnp.*
+
+# ---------- Logs ----------
+*.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ---------- OS / editor ----------
 .DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.idea/
+*.iml
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+.history/
+
+# ---------- Metro / JS tooling ----------
+.metro-health-check*
+.expo/
+.bundle/
+.eslintcache
+.jest-cache/
+coverage/
+*.tsbuildinfo
+dist/
+build/
+web-build/
+
+# ---------- Android ----------
+android/.gradle/
+android/build/
+android/app/build/
+android/app/.cxx/
+android/.cxx/
+.cxx/
+android/captures/
+android/local.properties
+android/app/release/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.hprof
+.externalNativeBuild/
+.kotlin/
+# generated JS bundle
+android/app/src/main/assets/index.android.bundle
+android/app/src/main/assets/index.android.bundle.meta
+android/app/src/main/res/drawable-*/node_modules_*
+android/app/src/main/res/raw/node_modules_*
+
+# ---------- iOS (optional) ----------
+ios/Pods/
+ios/build/
+ios/.xcode.env.local
+*.xcworkspace/xcuserdata/
+xcuserdata/
+DerivedData/
+*.xcuserstate
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+vendor/bundle/
+
+# ---------- Ruby (RN iOS tooling) ----------
+.ruby-version
+
+# ---------- Backend (server/) ----------
+server/node_modules/
+server/.env
+server/.env.*
+!server/.env.example
+server/data/
+server/uploads/
+server/tmp/
+
+# ---------- Local test artifacts / recordings ----------
+*.mp4
+*.mov
+*.webm
+screenrecord*
+tmp/
+temp/
+.cache/
+
+# ---------- Misc ----------
+.watchmanconfig.local
+*.orig
+*.rej
